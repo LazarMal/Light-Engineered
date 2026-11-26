@@ -2,29 +2,9 @@
 
 Signature V05 source baseline, 2026-11-26. No V06 experiments.
 
-This is a development source snapshot, not an approved public deployment. The original V05 HTML, CSS and JavaScript are preserved. Some third-party reference media and their derivatives are excluded pending publication rights clearance. Consequently, certain images and the assembly video will not appear until approved media is restored. Do not enable Pages or deploy this snapshot as a finished website.
+Development preview only, not a final production release. The original V05 HTML, CSS and JavaScript are preserved. All 18 previously omitted original media assets were restored from the supplied V05 Git import archive at the owner's instruction. This restoration is limited to the existing preview; third-party publication rights remain the owner's responsibility. No technical product approvals are implied.
 
-Run `python -m http.server 8765` from the repository root for local development once the approved assets are present.
+Run `python -m http.server 8765` from the repository root for local development.
 
 ## Version control
-`main`: V05 baseline. Use feature branches and review before merging. The baseline commit is the rollback point.
-
-## Media on hold
-- `assets/macro-honeycomb-gray.webp`
-- `assets/macro-honeycomb.webp`
-- `assets/macro-pleated.webp`
-- `assets/macro-roller.webp`
-- `assets/macro-venetian.webp`
-- `assets/photo-daynight-room.webp`
-- `assets/photo-pleated-room.webp`
-- `assets/photo-roller-room.webp`
-- `assets/photo-venetian-room.webp`
-- `assets/product-daynight.webp`
-- `assets/product-pleat.webp`
-- `assets/product-roller.webp`
-- `assets/product-venetian.webp`
-- `assets/roller-assembly-study.mp4`
-- `assets/roller-isolated.webp`
-- `assets/signature-roller-fabric.webp`
-- `assets/signature-roller-tube.webp`
-- `assets/wood-components.webp`
+`main`: V05 preview baseline. Use feature branches and review before merging new design changes. Original baseline rollback: `ddc310501590e7303a052484b715c6ebfb089454`.
