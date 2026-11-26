@@ -1,0 +1,36 @@
+/* Signature V05 — independent motion layer. Existing catalogue and rail untouched. */
+.story-intro{position:relative;isolation:isolate;overflow:visible}
+.story-intro>.reveal{position:relative;z-index:2}
+.signature-cloth{position:absolute;z-index:3;top:0;left:0;right:0;height:clamp(90px,11vw,172px);transform:translateY(-98%);pointer-events:none;overflow:hidden;filter:drop-shadow(0 -8px 24px #241d1818)}
+.signature-cloth svg{width:100%;height:100%;display:block}
+.signature-shadow{position:absolute;z-index:3;inset:0;overflow:hidden;pointer-events:none;mix-blend-mode:multiply;opacity:.24;mask-image:linear-gradient(90deg,#000 0%,#000 44%,transparent 86%)}
+.signature-shadow::before{content:"";position:absolute;inset:-35%;background:repeating-linear-gradient(157deg,transparent 0 45px,#45453b55 49px,#45453b70 66px,transparent 73px 110px);transform:translate3d(var(--shadow-x,-12%),var(--shadow-y,0%),0) rotate(-5deg);filter:blur(2.7px)}
+/* The object is composed of its source image, its extracted tube and a registered outline. */
+.scene-study .scene-model{overflow:visible;--part-lift:0px;--part-x:0px;--outline:0;--photo:1}
+.scene-model .signature-static{display:block}
+.scene-model .signature-physical,.scene-model .signature-outline{display:none}
+.signature-ready .scene-model .signature-static{display:none}
+.signature-ready .scene-model .signature-physical{position:absolute;inset:0;display:block;opacity:var(--photo)}
+.signature-ready .scene-model .signature-physical img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:none}
+.signature-ready .scene-model .signature-physical .signature-tube{transform:translate3d(var(--part-x),var(--part-lift),0);filter:drop-shadow(0 9px 9px #29323825)}
+.signature-ready .scene-model .signature-outline{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;filter:none;clip-path:inset(0 0 0 calc((1 - var(--outline))*100%));opacity:1}
+.signature-ready .scene-model .signature-fabric{clip-path:inset(0 calc(var(--outline)*100%) 0 0)}
+.signature-ready .scene-model .signature-tube{clip-path:inset(0 calc(var(--outline)*100%) 0 0)}
+/* The drawing is the same silhouette, not an unrelated technical card. */
+.signature-ready .scene-object-measure,.signature-ready .scene-drawing{display:none}
+.signature-ready .scene-closeup{width:clamp(210px,18vw,300px);height:clamp(130px,17vh,190px);bottom:9%;right:3%}
+.signature-ready .scene-closeup-copy small{display:none}
+/* Moving illumination, confined to the material photograph. No additional images or cards. */
+#material-studies .material-feature-image{position:relative;isolation:isolate}
+.signature-light{position:absolute;inset:0;pointer-events:none;background:linear-gradient(111deg,#07121b24 0%,#07121b11 27%,transparent 45%,#fce3bb24 51%,#fce3bb46 57%,transparent 70%,#07121b26 100%);mix-blend-mode:soft-light;opacity:0}
+.signature-ready .signature-light{opacity:1;background:linear-gradient(110deg,#0a15212a 0%,#0a152122 calc(var(--beam,48%) - 19%),transparent calc(var(--beam,48%) - 10%),#fff2d85c var(--beam,48%),transparent calc(var(--beam,48%) + 12%),#07111c33 100%)}
+@media(max-width:760px){.signature-cloth{height:75px}.signature-shadow{opacity:.16;mask-image:linear-gradient(#000 0%,transparent 95%)}.signature-shadow::before{background:repeating-linear-gradient(157deg,transparent 0 24px,#45453b65 27px,#45453b60 37px,transparent 41px 62px)}.signature-ready .scene-closeup{width:172px;height:116px;bottom:8%;right:var(--page)}.signature-ready .scene-model{top:7%;bottom:14%}}
+@media(prefers-reduced-motion:reduce){.signature-cloth,.signature-shadow,.signature-light{display:none}.signature-ready .scene-model .signature-static{display:block}.signature-ready .scene-model .signature-physical,.signature-ready .scene-model .signature-outline{display:none}}
+/* Final refinements: keep the hero footnote visible until the user scrolls, and avoid cropping italic descenders. */
+.signature-cloth{visibility:hidden}
+.signature-ready .signature-cloth{visibility:visible}
+.hero h1 .line{padding-bottom:.15em;margin-bottom:-.15em}
+.signature-ready .scene-footer span:last-child{color:color-mix(in srgb,#fff, #293e48 calc(var(--studio-ink,0)*100%))}
+.signature-ready .scene-progress{background:color-mix(in srgb,#ffffff50,#293e4840 calc(var(--studio-ink,0)*100%))}
+.signature-ready .scene-progress-fill{background:color-mix(in srgb,#fff,#293e48 calc(var(--studio-ink,0)*100%))}
+@media(max-width:760px){.signature-ready .scene-architecture{transform:none}}
